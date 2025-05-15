@@ -320,6 +320,6 @@ n* 2^k-1 ≡ 1* 2(p-1)-1 ≡ 1-1 ≡ 0 [MOD p], and clearly n * 2^k-1 > p, so n 
 we can take k=q-2, getting n * 2^k-1 ≡ 2 * 2^(q-2) - 1 ≡ 2^(q-1)-1 ≡ 0 [MOD q] by Fermat's Little Theorem. Trivially,
 k ∈ {2, ..., n}, so either way, we reach a contradiction.
 -/
-lemma om2025_s2_p2 (n : ℕ) (hn : n ≥ 2)
+theorem om2025_s2_p2 (n : ℕ) (hn : n ≥ 2)
   : (∀ k, 2 ≤ k ∧ k ≤ n → Nat.Prime (n * 2 ^ k - 1)) ↔ n = 2 ∨ n = 3 := by
   exact Iff.intro (om2025_s2_p2_dir_1 n hn) (om2025_s2_p2_dir_2 n)
